@@ -24,11 +24,11 @@ describe('bindPropertyDescriptor()', function () {
   it('binds getter', function () {
     var obj = Object.defineProperty({}, 'foo', {
       get: function () {
-        expect(this).toBe(obj)
+        return this
       }
     })
 
-    createObjectWithBoundProperty(obj, 'foo').foo
+    expect(createObjectWithBoundProperty(obj, 'foo').foo).toBe(obj)
   })
 
   it('binds setter', function () {
