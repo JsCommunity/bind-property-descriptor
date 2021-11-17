@@ -1,6 +1,6 @@
 {
   "name": "bind-property-descriptor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "ISC",
   "description": "bind a property descriptor (value, getter and setter)",
   "keywords": [
