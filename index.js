@@ -1,7 +1,3 @@
-Object.defineProperty(exports, '__esModule', {
-  value: true
-})
-
 var assign = require('lodash/assign')
 var bind = require('lodash/bind')
 
@@ -25,7 +21,7 @@ function bindPropertyDescriptor (descriptor, thisArg) {
 
   return descriptor
 }
-exports.default = bindPropertyDescriptor
+exports.bindPropertyDescriptor = bindPropertyDescriptor
 
 function getBoundPropertyDescriptor (obj, prop, thisArg) {
   var descriptor = Object.getOwnPropertyDescriptor(obj, prop)

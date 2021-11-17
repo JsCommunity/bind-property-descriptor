@@ -32,7 +32,7 @@ const emma = {
 > the bound object.
 
 ```js
-import bindPropertyDescriptor from 'bind-property-descriptor'
+import { bindPropertyDescriptor } from 'bind-property-descriptor'
 
 const obj = {}
 
