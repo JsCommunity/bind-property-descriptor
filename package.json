@@ -22,18 +22,18 @@
   "preferGlobal": false,
   "bin": {},
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "devDependencies": {
-    "dependency-check": "^2.8.0",
-    "husky": "^0.13.3",
-    "jest": "^19.0.2",
-    "rimraf": "^2.6.1",
-    "standard": "^10.0.2"
+    "husky": "^4",
+    "jest": "^27.3.1",
+    "standard": "^16.0.4"
+  },
+  "hooks": {
+    "pre-commit": "npm test"
   },
   "scripts": {
-    "commitmsg": "npm test",
-    "posttest": "standard && dependency-check ./package.json",
+    "posttest": "standard",
     "test": "jest"
   }
 }

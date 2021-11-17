@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-var getBoundPropertyDescriptor = require('./').getBoundPropertyDescriptor
+const getBoundPropertyDescriptor = require('./').getBoundPropertyDescriptor
 
 describe('bindPropertyDescriptor()', function () {
   function createObjectWithBoundProperty (obj, prop) {
@@ -12,7 +12,7 @@ describe('bindPropertyDescriptor()', function () {
   }
 
   it('binds value', function () {
-    var obj = {
+    const obj = {
       foo: function () {
         expect(this).toBe(obj)
       }
@@ -22,7 +22,7 @@ describe('bindPropertyDescriptor()', function () {
   })
 
   it('binds getter', function () {
-    var obj = Object.defineProperty({}, 'foo', {
+    const obj = Object.defineProperty({}, 'foo', {
       get: function () {
         return this
       }
@@ -32,7 +32,7 @@ describe('bindPropertyDescriptor()', function () {
   })
 
   it('binds setter', function () {
-    var obj = Object.defineProperty({}, 'foo', { // eslint-disable-line accessor-pairs
+    const obj = Object.defineProperty({}, 'foo', { // eslint-disable-line accessor-pairs
       set: function () {
         expect(this).toBe(obj)
       }

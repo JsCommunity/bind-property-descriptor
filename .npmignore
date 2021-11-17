@@ -1,7 +1,11 @@
+.*
+
 /benchmark/
 /benchmarks/
 *.bench.js
 *.bench.js.map
+
+/coverage/
 
 /examples/
 example.js
@@ -20,3 +24,9 @@ example.js.map
 /tests/
 *.spec.js
 *.spec.js.map
+
+__snapshots__/
+
+/docs/
+/src/
+/USAGE.md
