@@ -1,22 +1,19 @@
-var assign = require('lodash/assign')
-var bind = require('lodash/bind')
-
 function bindPropertyDescriptor (descriptor, thisArg) {
-  descriptor = assign({}, descriptor)
+  descriptor = Object.assign({}, descriptor)
 
   var get = descriptor.get
   if (get !== undefined) {
-    descriptor.get = bind(get, thisArg)
+    descriptor.get = get.bind(thisArg)
   }
 
   var set = descriptor.set
   if (set !== undefined) {
-    descriptor.set = bind(set, thisArg)
+    descriptor.set = set.bind(thisArg)
   }
 
   var value = descriptor.value
   if (typeof value === 'function') {
-    descriptor.value = bind(value, thisArg)
+    descriptor.value = value.bind(thisArg)
   }
 
   return descriptor

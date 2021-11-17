@@ -24,9 +24,6 @@
   "engines": {
     "node": ">=4"
   },
-  "dependencies": {
-    "lodash": "^4.17.4"
-  },
   "devDependencies": {
     "dependency-check": "^2.8.0",
     "husky": "^0.13.3",
